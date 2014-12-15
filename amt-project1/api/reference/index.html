@@ -62,7 +62,7 @@
                     <div class="panel-body">
                       <!-- extended "buttons" (list)-->
                       <div class="list-group"><a href="#" data-toggle="modal" data-target="#sensors_get" class="list-group-item"><span class="badge badge_get">get  </span><span><p>Retrieve a collection of sensors</p>
-</span></a><a href="#" data-toggle="modal" data-target="#sensors_post" class="list-group-item"><span class="badge badge_post">post  </span><span><p>Create a collection of sensors</p>
+</span></a><a href="#" data-toggle="modal" data-target="#sensors_post" class="list-group-item"><span class="badge badge_post">post  </span><span><p>Create a sensor</p>
 </span></a>
                       </div>
                     </div>
@@ -89,31 +89,43 @@
                             <div id="sensors_get_request" class="tab-pane">
                               <h3>Query Parameters</h3>
                               <ul>
-                                <li class="markdown"><strong>organization</strong><em> (string)</em><p>An organization’s name</p>
+                                <li class="markdown"><strong>organizationId</strong><em> (integer)</em><p>An organization’s id</p>
 
-                                  <p><small><strong>Example:</strong><code>AAA</code></small></p>
-                                </li>
-                                <li class="markdown"><strong>place</strong><em> (string)</em><p>The sensor’s place</p>
-
-                                </li>
-                                <li class="markdown"><strong>day</strong><em> (string)</em><p>The day of creation of the sensor</p>
-
-                                </li>
-                                <li class="markdown"><strong>month</strong><em> (string)</em><p>The month of creation of the sensor</p>
-
-                                </li>
-                                <li class="markdown"><strong>year</strong><em> (string)</em><p>The year of creation of the sensor</p>
-
-                                </li>
-                                <li class="markdown"><strong>type_measure</strong><em> (string)</em><p>The type of the measure delivered by the sensor</p>
-
+                                  <p><small><strong>Example:</strong><code>109</code></small></p>
                                 </li>
                               </ul>
                             </div>
                             <div id="sensors_get_response" class="tab-pane">
                               <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/200" target="_blank">200</a></h2>
                               <h3>Body</h3>
-                              <p><strong>Type: application/json</strong></p>
+                              <p><strong>Type: application/json</strong></p><strong>Example:</strong>
+                              <pre>[
+  { 
+    "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"measure indoor"</span></span>, 
+    "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Sensor1"</span></span>, 
+    "<span class="hljs-attribute">organization</span>" : 
+    <span class="hljs-value">{
+      "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">104</span></span>,
+      "<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"org1"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"temperature"</span></span>, 
+    "<span class="hljs-attribute">visible</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,                   
+  },
+  { 
+    "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"measure outdoor"</span></span>, 
+    "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Sensor2"</span></span>, 
+    "<span class="hljs-attribute">organization</span>" : 
+    <span class="hljs-value">{
+      "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">112</span></span>,
+      "<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"firstorg"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"temperature"</span></span>, 
+    "<span class="hljs-attribute">visible</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,                   
+  }              
+]
+</pre>
                             </div>
                           </div>
                         </div>
@@ -136,25 +148,31 @@
                           </ul>
                           <!-- Tab panes-->
                           <div class="tab-content">
-                            <div id="sensors_post_description" class="tab-pane active"><span><p>Create a collection of sensors</p>
+                            <div id="sensors_post_description" class="tab-pane active"><span><p>Create a sensor</p>
 </span>
                             </div>
                             <div id="sensors_post_request" class="tab-pane">
-                              <h3>Headers</h3>
-                              <ul>
-                                <li class="markdown"><strong>Authorization</strong><em> (string)</em><p>A description</p>
-
-                                </li>
-                              </ul>
                               <h3>Body</h3>
                               <p><strong>Type: application/json</strong></p><strong>Example:</strong>
-                              <pre>{ "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"mySensors"</span> </span>}
+                              <pre>{
+  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Measure indoor"</span></span>,
+  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Sensor 3"</span></span>,
+  "<span class="hljs-attribute">organization</span>":
+  <span class="hljs-value">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">104</span></span>,
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"organization 1"</span>
+  </span>}
+  <span class="hljs-string">"type"</span>: <span class="hljs-string">"temperature"</span></span>,
+  "<span class="hljs-attribute">visible</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+}
 </pre>
                             </div>
                             <div id="sensors_post_response" class="tab-pane">
                               <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/201" target="_blank">201</a></h2>
                               <h3>Body</h3>
-                              <p><strong>Type: application/json</strong></p>
+                              <p><strong>Type: application/json</strong></p><strong>Example:</strong>
+                              <pre>5
+</pre>
                             </div>
                           </div>
                         </div>
@@ -207,7 +225,20 @@
                             <div id="sensors_sensorsId_get_response" class="tab-pane">
                               <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/200" target="_blank">200</a></h2>
                               <h3>Body</h3>
-                              <p><strong>Type: application/json</strong></p>
+                              <p><strong>Type: application/json</strong></p><strong>Example:</strong>
+                              <pre>{ 
+  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"measure outdoor"</span></span>, 
+  "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
+  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Sensor2"</span></span>, 
+  "<span class="hljs-attribute">organization</span>" : 
+  <span class="hljs-value">{
+    "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">112</span></span>,
+    "<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"first organization"</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"temperature"</span></span>, 
+  "<span class="hljs-attribute">visible</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,                   
+}            
+</pre>
                               <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>The sensor was not found.</p>
 
                             </div>
@@ -239,12 +270,21 @@
                               <ul>
                                 <li><strong>sensorsId string</strong></li>
                               </ul>
-                              <h3>Query Parameters</h3>
-                              <ul>
-                                <li class="markdown"><strong>access_token</strong><em> (string)</em><p>Token giving permission to update sensor’s informations</p>
-
-                                </li>
-                              </ul>
+                              <h3>Body</h3>
+                              <p><strong>Type: application/json</strong></p><strong>Example:</strong>
+                              <pre>{ 
+  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"measure outdoor"</span></span>, 
+  "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
+  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Sensor2"</span></span>, 
+  "<span class="hljs-attribute">organization</span>" : 
+  <span class="hljs-value">{
+    "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">115</span></span>,
+    "<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"second organization"</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"temperature"</span></span>, 
+  "<span class="hljs-attribute">visible</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,                   
+}           
+</pre>
                             </div>
                           </div>
                         </div>
@@ -1220,7 +1260,7 @@ REST APIs and WEB UIs. Every user belongs to a single observation.</p>
     <div class="footer">
       <div class="container">
         <p><a href="#">AMTProject1</a>&nbsp;- AMT Project 1's API documentation</p>
-        <p>Version: 1.0.0  |  Built December 14, 2014 11:07 PM</p>
+        <p>Version: 1.0.0  |  Built December 15, 2014 2:51 AM</p>
       </div>
     </div>
     <script type="text/javascript" src="/amt-project1/js/global.js"></script>
