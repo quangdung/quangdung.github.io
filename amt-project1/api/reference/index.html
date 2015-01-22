@@ -100,30 +100,22 @@
                               <h3>Body</h3>
                               <p><strong>Type: application/json</strong></p><strong>Example:</strong>
                               <pre>[
-  { 
-    "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"measure indoor"</span></span>, 
-    "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-number">1</span></span>,
-    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Sensor1"</span></span>, 
-    "<span class="hljs-attribute">organization</span>" : 
-    <span class="hljs-value">{
-      "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">104</span></span>,
-      "<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"org1"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"temperature"</span></span>, 
-    "<span class="hljs-attribute">visible</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,                   
-  },
-  { 
-    "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"measure outdoor"</span></span>, 
-    "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
-    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Sensor2"</span></span>, 
-    "<span class="hljs-attribute">organization</span>" : 
-    <span class="hljs-value">{
-      "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">112</span></span>,
-      "<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"firstorg"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"temperature"</span></span>, 
-    "<span class="hljs-attribute">visible</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,                   
-  }              
+  {
+    "<span class="hljs-attribute">description</span>":<span class="hljs-value"><span class="hljs-string">"Sensor nb 1 associated with the organization testGeneratedOrg1"</span></span>,
+    "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"testGeneratedSen1"</span></span>,
+    "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"sensorType1"</span></span>,
+    "<span class="hljs-attribute">visible</span>":<span class="hljs-value"><span class="hljs-literal">true</span>
+  </span>},
+  {
+    "<span class="hljs-attribute">description</span>":<span class="hljs-value"><span class="hljs-string">"Sensor nb 2 associated with the organization testGeneratedOrg1"</span></span>,
+    "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">2</span></span>,
+    "<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"testGeneratedSen2"</span></span>,
+    "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"sensorType2"</span></span>,
+    "<span class="hljs-attribute">visible</span>":<span class="hljs-value"><span class="hljs-literal">true</span>
+  </span>} 
 ]
 </pre>
                             </div>
@@ -155,24 +147,26 @@
                               <h3>Body</h3>
                               <p><strong>Type: application/json</strong></p><strong>Example:</strong>
                               <pre>{
-  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Measure indoor"</span></span>,
-  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Sensor 3"</span></span>,
-  "<span class="hljs-attribute">organization</span>":
-  <span class="hljs-value">{
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">104</span></span>,
-    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"organization 1"</span>
-  </span>}
-  <span class="hljs-string">"type"</span>: <span class="hljs-string">"temperature"</span></span>,
-  "<span class="hljs-attribute">visible</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-}
+  "<span class="hljs-attribute">description</span>":<span class="hljs-value"><span class="hljs-string">"Sensor associated with the orgId 251"</span></span>,
+  "<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"sensor 1"</span></span>,
+  "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">30</span></span>,
+  "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"sensorType"</span></span>,
+  "<span class="hljs-attribute">visible</span>":<span class="hljs-value"><span class="hljs-literal">true</span>
+</span>}
 </pre>
                             </div>
                             <div id="sensors_post_response" class="tab-pane">
                               <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/201" target="_blank">201</a></h2>
                               <h3>Body</h3>
                               <p><strong>Type: application/json</strong></p><strong>Example:</strong>
-                              <pre><span class="hljs-number">5</span>
-(<span class="hljs-operator">the</span> id <span class="hljs-operator">of</span> <span class="hljs-operator">the</span> <span class="hljs-built_in">new</span> sensor)
+                              <pre>{
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">130</span></span>,
+  "<span class="hljs-attribute">description</span>":<span class="hljs-value"><span class="hljs-string">"Sensor associated with the orgId 251"</span></span>,
+  "<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"sensor 1"</span></span>,
+  "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">30</span></span>,
+  "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"sensorType"</span></span>,
+  "<span class="hljs-attribute">visible</span>":<span class="hljs-value"><span class="hljs-literal">true</span>
+</span>}
 </pre>
                             </div>
                           </div>
@@ -227,18 +221,14 @@
                               <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/200" target="_blank">200</a></h2>
                               <h3>Body</h3>
                               <p><strong>Type: application/json</strong></p><strong>Example:</strong>
-                              <pre>{ 
-  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"measure outdoor"</span></span>, 
-  "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
-  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Sensor2"</span></span>, 
-  "<span class="hljs-attribute">organization</span>" : 
-  <span class="hljs-value">{
-    "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">112</span></span>,
-    "<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"first organization"</span>
-  </span>}</span>,
-  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"temperature"</span></span>, 
-  "<span class="hljs-attribute">visible</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,                   
-}            
+                              <pre>{
+  "<span class="hljs-attribute">description</span>":<span class="hljs-value"><span class="hljs-string">"Sensor nb 3 associated with the organization testGeneratedOrg4"</span></span>,
+  "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">12</span></span>,
+  "<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"testGeneratedSen3"</span></span>,
+  "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">4</span></span>,
+  "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"sensorType3"</span></span>,
+  "<span class="hljs-attribute">visible</span>":<span class="hljs-value"><span class="hljs-literal">true</span>
+</span>}         
 </pre>
                               <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>The sensor was not found.</p>
 
@@ -275,12 +265,9 @@
                               <p><strong>Type: application/json</strong></p><strong>Example:</strong>
                               <pre>{ 
   "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"measure outdoor"</span></span>, 
+  "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">12</span></span>,
   "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Sensor2"</span></span>, 
-  "<span class="hljs-attribute">organization</span>" : 
-  <span class="hljs-value">{
-    "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">115</span></span>,
-    "<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"second organization"</span>
-  </span>}</span>,
+  "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">4</span></span>,
   "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"temperature"</span></span>, 
   "<span class="hljs-attribute">visible</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,                   
 }           
@@ -555,6 +542,68 @@
                     </div>
                   </div>
                 </div>
+                <div class="panel panel-white">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <!-- collapsed "buttons" (on the right side)--><a data-toggle="collapse" href="#panel_organizations_organizationsId_contact" class="block collapsed"><span id="get_organizations_organizationsId_contact" class="badge badge_get">get  </span><span class="parent">/organizations</span>/{organizationsId}/contact
+                        </a>
+                    </h4>
+                  </div>
+                  <div id="panel_organizations_organizationsId_contact" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <!-- extended "buttons" (list)-->
+                      <div class="list-group"><a href="#" data-toggle="modal" data-target="#organizations_organizationsId_contact_get" class="list-group-item"><span class="badge badge_get">get  </span><span><p>Retrieve the organization’s contact</p>
+</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="organizations_organizationsId_contact_get" class="modal fade">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+                          <h4 class="modal-title"><span class="badge badge_get">get  </span>&nbsp;&nbsp;<span class="parent">/organizations</span>/{organizationsId}/contact</h4>
+                        </div>
+                        <div class="modal-body">
+                          <!-- Nav tabs-->
+                          <ul class="nav nav-tabs">
+                            <li class="active"><a href="#organizations_organizationsId_contact_get_description" data-toggle="tab">Description</a></li>
+                            <li><a href="#organizations_organizationsId_contact_get_request" data-toggle="tab">Request</a></li>
+                            <li><a href="#organizations_organizationsId_contact_get_response" data-toggle="tab">Response</a></li>
+                          </ul>
+                          <!-- Tab panes-->
+                          <div class="tab-content">
+                            <div id="organizations_organizationsId_contact_get_description" class="tab-pane active"><span><p>Retrieve the organization’s contact</p>
+</span>
+                            </div>
+                            <div id="organizations_organizationsId_contact_get_request" class="tab-pane">
+                              <h3>URI Parameters</h3>
+                              <ul>
+                                <li><strong>organizationsId string</strong></li>
+                              </ul>
+                            </div>
+                            <div id="organizations_organizationsId_contact_get_response" class="tab-pane">
+                              <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/200" target="_blank">200</a></h2>
+                              <h3>Body</h3>
+                              <p><strong>Type: application/json</strong></p><strong>Example:</strong>
+                              <pre>{
+  "<span class="hljs-attribute">email</span>":<span class="hljs-value"><span class="hljs-string">"user@test.com"</span></span>,
+  "<span class="hljs-attribute">firstName</span>":<span class="hljs-value"><span class="hljs-string">"Firstnametest"</span></span>,
+  "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">2</span></span>,
+  "<span class="hljs-attribute">lastName</span>":<span class="hljs-value"><span class="hljs-string">"Lastnametest2"</span></span>,
+  "<span class="hljs-attribute">mainContact</span>":<span class="hljs-value"><span class="hljs-literal">true</span></span>,
+  "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">1</span>
+</span>}                   
+</pre>
+                              <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>The organization was not found.</p>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="panel-footer"><a href="#top" class="btn">Back to top</a></div>
@@ -619,33 +668,23 @@ REST APIs and WEB UIs. Every user belongs to a single observation.</p>
                               <h3>Body</h3>
                               <p><strong>Type: application/json</strong></p><strong>Example:</strong>
                               <pre>[
-  {                  
-    "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">201</span></span>,
-    "<span class="hljs-attribute">email</span>":<span class="hljs-value"><span class="hljs-string">"jw@email.com"</span></span>,
-    "<span class="hljs-attribute">firstName</span>":<span class="hljs-value"><span class="hljs-string">"John"</span></span>,
-    "<span class="hljs-attribute">lastName</span>":<span class="hljs-value"><span class="hljs-string">"White"</span></span>,
-    "<span class="hljs-attribute">mainContact</span>":<span class="hljs-value"><span class="hljs-literal">true</span></span>,
-    "<span class="hljs-attribute">organization</span>":
-    <span class="hljs-value">{
-      "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">108</span></span>,
-      "<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"org5"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">password</span>":<span class="hljs-value"><span class="hljs-string">"pass1"</span>
-  </span>},
-  {                  
-    "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">202</span></span>,
-    "<span class="hljs-attribute">email</span>":<span class="hljs-value"><span class="hljs-string">"sb@email.com"</span></span>,
-    "<span class="hljs-attribute">firstName</span>":<span class="hljs-value"><span class="hljs-string">"Smith"</span></span>,
-    "<span class="hljs-attribute">lastName</span>":<span class="hljs-value"><span class="hljs-string">"Brown"</span></span>,
+  {
+    "<span class="hljs-attribute">email</span>":<span class="hljs-value"><span class="hljs-string">"user@test.com"</span></span>,
+    "<span class="hljs-attribute">firstName</span>":<span class="hljs-value"><span class="hljs-string">"Firstnametest"</span></span>,
+    "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">lastName</span>":<span class="hljs-value"><span class="hljs-string">"Lastnametest1"</span></span>,
     "<span class="hljs-attribute">mainContact</span>":<span class="hljs-value"><span class="hljs-literal">false</span></span>,
-    "<span class="hljs-attribute">organization</span>":
-    <span class="hljs-value">{
-      "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">108</span></span>,
-      "<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"org5"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">password</span>":<span class="hljs-value"><span class="hljs-string">"pass1"</span>
-    </span>}
-  ]
+    "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">1</span>
+  </span>},
+  {
+    "<span class="hljs-attribute">email</span>":<span class="hljs-value"><span class="hljs-string">"user@test.com"</span></span>,
+    "<span class="hljs-attribute">firstName</span>":<span class="hljs-value"><span class="hljs-string">"Firstnametest"</span></span>,
+    "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">2</span></span>,
+    "<span class="hljs-attribute">lastName</span>":<span class="hljs-value"><span class="hljs-string">"Lastnametest2"</span></span>,
+    "<span class="hljs-attribute">mainContact</span>":<span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">1</span>
+  </span>}
+]
 </pre>
                             </div>
                           </div>
@@ -676,16 +715,13 @@ REST APIs and WEB UIs. Every user belongs to a single observation.</p>
                               <h3>Body</h3>
                               <p><strong>Type: application/json</strong></p><strong>Example:</strong>
                               <pre>{
+  "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">2</span></span>,
   "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"Smith"</span></span>,
   "<span class="hljs-attribute">lastName</span>": <span class="hljs-value"><span class="hljs-string">"Brown"</span></span>,
   "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"sb@email.com"</span></span>,
   "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"pass1"</span></span>,
-  "<span class="hljs-attribute">organization</span>": 
-  <span class="hljs-value">{
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">108</span></span>,
-    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"org5"</span>
-  </span>}</span>,
-  "<span class="hljs-attribute">mainContact</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+  "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">1</span>
+  <span class="hljs-string">"mainContact"</span>: <span class="hljs-literal">false</span>
 </span>}
 </pre>
                             </div>
@@ -693,8 +729,15 @@ REST APIs and WEB UIs. Every user belongs to a single observation.</p>
                               <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/201" target="_blank">201</a></h2>
                               <h3>Body</h3>
                               <p><strong>Type: application/json</strong></p><strong>Example:</strong>
-                              <pre><span class="hljs-number">203</span>
-(<span class="hljs-operator">the</span> id <span class="hljs-operator">of</span> <span class="hljs-operator">the</span> <span class="hljs-built_in">new</span> user)
+                              <pre>{
+  "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">203</span></span>,
+  "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"Smith"</span></span>,
+  "<span class="hljs-attribute">lastName</span>": <span class="hljs-value"><span class="hljs-string">"Brown"</span></span>,
+  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"sb@email.com"</span></span>,
+  "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"pass1"</span></span>,
+  "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">1</span>
+  <span class="hljs-string">"mainContact"</span>: <span class="hljs-literal">false</span>
+</span>}
 </pre>
                             </div>
                           </div>
@@ -750,16 +793,13 @@ REST APIs and WEB UIs. Every user belongs to a single observation.</p>
                               <h3>Body</h3>
                               <p><strong>Type: application/json</strong></p><strong>Example:</strong>
                               <pre>{
+  "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">23</span></span>,
   "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"Smith"</span></span>,
   "<span class="hljs-attribute">lastName</span>": <span class="hljs-value"><span class="hljs-string">"Brown"</span></span>,
   "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"sb@email.com"</span></span>,
   "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"pass1"</span></span>,
-  "<span class="hljs-attribute">organization</span>": 
-  <span class="hljs-value">{
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">108</span></span>,
-    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"org5"</span>
-  </span>}</span>,
-  "<span class="hljs-attribute">mainContact</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+  "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">1</span>
+  <span class="hljs-string">"mainContact"</span>: <span class="hljs-literal">false</span>
 </span>}
 </pre>
                               <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>The user was not found.</p>
@@ -796,16 +836,13 @@ REST APIs and WEB UIs. Every user belongs to a single observation.</p>
                               <h3>Body</h3>
                               <p><strong>Type: application/json</strong></p><strong>Example:</strong>
                               <pre>{
+  "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">2</span></span>,
   "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"new firstName"</span></span>,
   "<span class="hljs-attribute">lastName</span>": <span class="hljs-value"><span class="hljs-string">"new lastName"</span></span>,
   "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"sb@email.com"</span></span>,
   "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"pass1"</span></span>,
-  "<span class="hljs-attribute">organization</span>": 
-  <span class="hljs-value">{
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">108</span></span>,
-    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"org5"</span>
-  </span>}</span>,
-  "<span class="hljs-attribute">mainContact</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+  "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">1</span>
+  <span class="hljs-string">"mainContact"</span>: <span class="hljs-literal">false</span>
 </span>}
 </pre>
                             </div>
@@ -856,103 +893,22 @@ REST APIs and WEB UIs. Every user belongs to a single observation.</p>
               </h3>
             </div>
             <div class="panel-body">
-              <div class="resource-description"><p>The observation pushed by the sensor, using a (write-only) REST API. An observation reports a sensor value at a given time.</p>
+              <div class="resource-description"><p>The observation pushed by the sensor, using a (write-only) REST API. 
+An observation reports a sensor value at a given time.</p>
 </div>
               <div class="panel-group">
                 <div class="panel panel-white">
                   <div class="panel-heading">
                     <h4 class="panel-title">
-                      <!-- collapsed "buttons" (on the right side)--><a data-toggle="collapse" href="#panel_observations" class="block collapsed"><span id="get_observations" class="badge badge_get">get  </span><span id="post_observations" class="badge badge_post">post  </span><span class="parent"></span>/observations
+                      <!-- collapsed "buttons" (on the right side)--><a data-toggle="collapse" href="#panel_observations" class="block collapsed"><span id="post_observations" class="badge badge_post">post  </span><span class="parent"></span>/observations
                         </a>
                     </h4>
                   </div>
                   <div id="panel_observations" class="panel-collapse collapse">
                     <div class="panel-body">
                       <!-- extended "buttons" (list)-->
-                      <div class="list-group"><a href="#" data-toggle="modal" data-target="#observations_get" class="list-group-item"><span class="badge badge_get">get  </span><span><p>Retrieve a collection of observations</p>
-</span></a><a href="#" data-toggle="modal" data-target="#observations_post" class="list-group-item"><span class="badge badge_post">post  </span><span><p>Create an observation</p>
+                      <div class="list-group"><a href="#" data-toggle="modal" data-target="#observations_post" class="list-group-item"><span class="badge badge_post">post  </span><span><p>Create an observation</p>
 </span></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="observations_get" class="modal fade">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
-                          <h4 class="modal-title"><span class="badge badge_get">get  </span>&nbsp;&nbsp;<span class="parent"></span>/observations</h4>
-                        </div>
-                        <div class="modal-body">
-                          <!-- Nav tabs-->
-                          <ul class="nav nav-tabs">
-                            <li class="active"><a href="#observations_get_description" data-toggle="tab">Description</a></li>
-                            <li><a href="#observations_get_request" data-toggle="tab">Request</a></li>
-                            <li><a href="#observations_get_response" data-toggle="tab">Response</a></li>
-                          </ul>
-                          <!-- Tab panes-->
-                          <div class="tab-content">
-                            <div id="observations_get_description" class="tab-pane active"><span><p>Retrieve a collection of observations</p>
-</span>
-                            </div>
-                            <div id="observations_get_request" class="tab-pane">
-                              <h3>Query Parameters</h3>
-                              <ul>
-                                <li class="markdown"><strong>sensorId</strong><em> (integer)</em><p>The observation’s place</p>
-
-                                </li>
-                                <li class="markdown"><strong>date</strong><em> (date)</em><p>The day of creation of the observation</p>
-
-                                </li>
-                              </ul>
-                            </div>
-                            <div id="observations_get_response" class="tab-pane">
-                              <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/200" target="_blank">200</a></h2>
-                              <h3>Body</h3>
-                              <p><strong>Type: application/json</strong></p><strong>Example:</strong>
-                              <pre>[
-  {
-    <span class="hljs-string">"creationDate"</span>:<span class="hljs-string">"2014-12-16"</span>,
-    <span class="hljs-string">"id"</span>:<span class="hljs-number">251</span>,
-    <span class="hljs-string">"name"</span>:<span class="hljs-string">"Observation 1"</span>,
-    <span class="hljs-string">"obsValue"</span>:<span class="hljs-number">25.4</span>,
-    <span class="hljs-string">"sensor :
-    {
-      "d</span>escription<span class="hljs-string">":"</span>firstsenso<span class="hljs-string">r",
-      "</span>id<span class="hljs-string">":118,
-      "</span>name<span class="hljs-string">":"</span>firstsenso<span class="hljs-string">r",
-      "</span>organization<span class="hljs-string">":
-      {
-        "</span>id<span class="hljs-string">":112,
-        "</span>name<span class="hljs-string">":"</span>firstorg
-      },
-        <span class="hljs-string">"type"</span>:<span class="hljs-string">"firstsensor"</span>,
-        <span class="hljs-string">"visible"</span>:<span class="hljs-literal">true</span>
-    }
-  },
-  {
-    <span class="hljs-string">"creationDate"</span>:<span class="hljs-string">"2014-12-18"</span>,
-    <span class="hljs-string">"id"</span>:<span class="hljs-number">254</span>,
-    <span class="hljs-string">"name"</span>:<span class="hljs-string">"Observation 2"</span>,
-    <span class="hljs-string">"obsValue"</span>:<span class="hljs-number">23.6</span>,
-    <span class="hljs-string">"sensor"</span>:
-    {
-      <span class="hljs-string">"description"</span>:<span class="hljs-string">"d1"</span>,
-      <span class="hljs-string">"id"</span>:<span class="hljs-number">151</span>,
-      <span class="hljs-string">"name"</span>:<span class="hljs-string">"n1"</span>,
-      <span class="hljs-string">"organization"</span>:
-      {
-        <span class="hljs-string">"id"</span>:<span class="hljs-number">104</span>,
-        <span class="hljs-string">"name"</span>:<span class="hljs-string">"org1"</span>
-      },
-      <span class="hljs-string">"type"</span>:<span class="hljs-string">"t1"</span>,
-      <span class="hljs-string">"visible"</span>:<span class="hljs-literal">true</span>
-    }
-  }
-]
-</pre>
-                            </div>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -976,30 +932,12 @@ REST APIs and WEB UIs. Every user belongs to a single observation.</p>
 </span>
                             </div>
                             <div id="observations_post_request" class="tab-pane">
-                              <h3>Headers</h3>
-                              <ul>
-                                <li class="markdown"><strong>Authorization</strong><em> (string)</em><p>A description</p>
-
-                                </li>
-                              </ul>
                               <h3>Body</h3>
                               <p><strong>Type: application/json</strong></p><strong>Example:</strong>
                               <pre>{
   "<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"Observation 1"</span></span>,
   "<span class="hljs-attribute">obsValue</span>":<span class="hljs-value"><span class="hljs-number">25.4</span></span>,
-  "<span class="hljs-attribute">sensor</span>":
-  <span class="hljs-value">{
-    "<span class="hljs-attribute">description</span>":<span class="hljs-value"><span class="hljs-string">"firstsensor"</span></span>,
-    "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">118</span></span>,
-    "<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"firstsensor"</span></span>,
-    "<span class="hljs-attribute">organization</span>":
-      <span class="hljs-value">{
-      "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">112</span></span>,
-      "<span class="hljs-attribute">name</span>":<span class="hljs-value"><span class="hljs-string">"firstorg"</span>
-      </span>}</span>,
-    "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"firstsensor"</span></span>,
-    "<span class="hljs-attribute">visible</span>":<span class="hljs-value"><span class="hljs-literal">true</span>
-  </span>}</span>,
+  "<span class="hljs-attribute">sensorId</span>":<span class="hljs-value"><span class="hljs-number">3</span></span>,
   "<span class="hljs-attribute">creationDate</span>": <span class="hljs-value"><span class="hljs-string">"2014-12-16"</span>
 </span>}
 </pre>
@@ -1018,54 +956,16 @@ REST APIs and WEB UIs. Every user belongs to a single observation.</p>
                 <div class="panel panel-white">
                   <div class="panel-heading">
                     <h4 class="panel-title">
-                      <!-- collapsed "buttons" (on the right side)--><a data-toggle="collapse" href="#panel_observations_observationId" class="block collapsed"><span id="get_observations_observationId" class="badge badge_get">get  </span><span id="put_observations_observationId" class="badge badge_put">put  </span><span id="delete_observations_observationId" class="badge badge_delete">delete  </span><span class="parent">/observations</span>/{observationId}
+                      <!-- collapsed "buttons" (on the right side)--><a data-toggle="collapse" href="#panel_observations_observationId" class="block collapsed"><span id="put_observations_observationId" class="badge badge_put">put  </span><span id="delete_observations_observationId" class="badge badge_delete">delete  </span><span class="parent">/observations</span>/{observationId}
                         </a>
                     </h4>
                   </div>
                   <div id="panel_observations_observationId" class="panel-collapse collapse">
                     <div class="panel-body">
                       <!-- extended "buttons" (list)-->
-                      <div class="list-group"><a href="#" data-toggle="modal" data-target="#observations_observationId_get" class="list-group-item"><span class="badge badge_get">get  </span><span><p>Retrieve an observation</p>
-</span></a><a href="#" data-toggle="modal" data-target="#observations_observationId_put" class="list-group-item"><span class="badge badge_put">put  </span><span><p>Update the observation’s informations</p>
+                      <div class="list-group"><a href="#" data-toggle="modal" data-target="#observations_observationId_put" class="list-group-item"><span class="badge badge_put">put  </span><span><p>Update the observation’s informations</p>
 </span></a><a href="#" data-toggle="modal" data-target="#observations_observationId_delete" class="list-group-item"><span class="badge badge_delete">delete  </span><span><p>Delete an observation</p>
 </span></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="observations_observationId_get" class="modal fade">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
-                          <h4 class="modal-title"><span class="badge badge_get">get  </span>&nbsp;&nbsp;<span class="parent">/observations</span>/{observationId}</h4>
-                        </div>
-                        <div class="modal-body">
-                          <!-- Nav tabs-->
-                          <ul class="nav nav-tabs">
-                            <li class="active"><a href="#observations_observationId_get_description" data-toggle="tab">Description</a></li>
-                            <li><a href="#observations_observationId_get_request" data-toggle="tab">Request</a></li>
-                            <li><a href="#observations_observationId_get_response" data-toggle="tab">Response</a></li>
-                          </ul>
-                          <!-- Tab panes-->
-                          <div class="tab-content">
-                            <div id="observations_observationId_get_description" class="tab-pane active"><span><p>Retrieve an observation</p>
-</span>
-                            </div>
-                            <div id="observations_observationId_get_request" class="tab-pane">
-                              <h3>URI Parameters</h3>
-                              <ul>
-                                <li><strong>observationId string</strong></li>
-                              </ul>
-                            </div>
-                            <div id="observations_observationId_get_response" class="tab-pane">
-                              <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/200" target="_blank">200</a></h2>
-                              <h3>Body</h3>
-                              <p><strong>Type: application/json</strong></p>
-                              <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>The observation was not found.</p>
-
-                            </div>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -1146,7 +1046,14 @@ REST APIs and WEB UIs. Every user belongs to a single observation.</p>
               </h3>
             </div>
             <div class="panel-body">
-              <div class="resource-description"><p>The fact</p>
+              <div class="resource-description"><p>The fact represents the values of the sensors observations received. 
+Actually, there are two types : counter and dailyStats.</p>
+<p>A “counter” fact counts the number of a sensor’s observations received. 
+So for each sensor, there is at mots one “counter” fact.</p>
+<p>A “dailyStats” fact counts the number of a sensor’s observations received 
+in one day. Also, it calculates the maximum value, the minimum value and 
+the average value of all the observations’ value in that day. So, 
+for each sensor and for each day, there is at most one “dailyStats” fact.</p>
 </div>
               <div class="panel-group">
                 <div class="panel panel-white">
@@ -1159,7 +1066,8 @@ REST APIs and WEB UIs. Every user belongs to a single observation.</p>
                   <div id="panel_facts" class="panel-collapse collapse">
                     <div class="panel-body">
                       <!-- extended "buttons" (list)-->
-                      <div class="list-group"><a href="#" data-toggle="modal" data-target="#facts_get" class="list-group-item"><span class="badge badge_get">get  </span><span><p>Retrieve a collection of facts</p>
+                      <div class="list-group"><a href="#" data-toggle="modal" data-target="#facts_get" class="list-group-item"><span class="badge badge_get">get  </span><span><p>Retrieve a collection of all type of facts</p>
+<p>For more information of a fact (calculated values), you have to do a GET “facts/[type]/{id}”</p>
 </span></a>
                       </div>
                     </div>
@@ -1180,7 +1088,8 @@ REST APIs and WEB UIs. Every user belongs to a single observation.</p>
                           </ul>
                           <!-- Tab panes-->
                           <div class="tab-content">
-                            <div id="facts_get_description" class="tab-pane active"><span><p>Retrieve a collection of facts</p>
+                            <div id="facts_get_description" class="tab-pane active"><span><p>Retrieve a collection of all type of facts</p>
+<p>For more information of a fact (calculated values), you have to do a GET “facts/[type]/{id}”</p>
 </span>
                             </div>
                             <div id="facts_get_request" class="tab-pane">
@@ -1197,13 +1106,15 @@ REST APIs and WEB UIs. Every user belongs to a single observation.</p>
                               <p><strong>Type: application/json</strong></p><strong>Example:</strong>
                               <pre>[
   {
-    "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">252</span></span>,
-    "<span class="hljs-attribute">nbObs</span>":<span class="hljs-value"><span class="hljs-number">3</span></span>,
+    "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">167</span></span>,
+    "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"counter"</span></span>,
     "<span class="hljs-attribute">visible</span>":<span class="hljs-value"><span class="hljs-literal">true</span>
   </span>},
   {
-    "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">253</span></span>,
-    "<span class="hljs-attribute">nbObs</span>":<span class="hljs-value"><span class="hljs-number">5</span></span>,
+    "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">168</span></span>,
+    "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"dailyStats"</span></span>,
     "<span class="hljs-attribute">visible</span>":<span class="hljs-value"><span class="hljs-literal">true</span>
   </span>}
 ]
@@ -1218,7 +1129,7 @@ REST APIs and WEB UIs. Every user belongs to a single observation.</p>
                 <div class="panel panel-white">
                   <div class="panel-heading">
                     <h4 class="panel-title">
-                      <!-- collapsed "buttons" (on the right side)--><a data-toggle="collapse" href="#panel_facts_factsId" class="block collapsed"><span id="get_facts_factsId" class="badge badge_get">get  </span><span id="delete_facts_factsId" class="badge badge_delete">delete  </span><span class="parent">/facts</span>/{factsId}
+                      <!-- collapsed "buttons" (on the right side)--><a data-toggle="collapse" href="#panel_facts_factsId" class="block collapsed"><span id="get_facts_factsId" class="badge badge_get">get  </span><span class="parent">/facts</span>/{factsId}
                         </a>
                     </h4>
                   </div>
@@ -1226,7 +1137,6 @@ REST APIs and WEB UIs. Every user belongs to a single observation.</p>
                     <div class="panel-body">
                       <!-- extended "buttons" (list)-->
                       <div class="list-group"><a href="#" data-toggle="modal" data-target="#facts_factsId_get" class="list-group-item"><span class="badge badge_get">get  </span><span><p>Retrieve a fact</p>
-</span></a><a href="#" data-toggle="modal" data-target="#facts_factsId_delete" class="list-group-item"><span class="badge badge_delete">delete  </span><span><p>Delete a fact</p>
 </span></a>
                       </div>
                     </div>
@@ -1261,8 +1171,9 @@ REST APIs and WEB UIs. Every user belongs to a single observation.</p>
                               <h3>Body</h3>
                               <p><strong>Type: application/json</strong></p><strong>Example:</strong>
                               <pre>{
-  "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">256</span></span>,
-  "<span class="hljs-attribute">nbObs</span>":<span class="hljs-value"><span class="hljs-number">4</span></span>,
+  "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">172</span></span>,
+  "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"dailyStats"</span></span>,
   "<span class="hljs-attribute">visible</span>":<span class="hljs-value"><span class="hljs-literal">true</span>
 </span>}
 </pre>
@@ -1274,29 +1185,280 @@ REST APIs and WEB UIs. Every user belongs to a single observation.</p>
                       </div>
                     </div>
                   </div>
-                  <div id="facts_factsId_delete" class="modal fade">
+                </div>
+                <div class="panel panel-white">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <!-- collapsed "buttons" (on the right side)--><a data-toggle="collapse" href="#panel_facts_counter" class="block collapsed"><span id="get_facts_counter" class="badge badge_get">get  </span><span class="parent">/facts</span>/counter
+                        </a>
+                    </h4>
+                  </div>
+                  <div id="panel_facts_counter" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <!-- extended "buttons" (list)-->
+                      <div class="list-group"><a href="#" data-toggle="modal" data-target="#facts_counter_get" class="list-group-item"><span class="badge badge_get">get  </span><span><p>Retrieve a collection of “counter” facts</p>
+</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="facts_counter_get" class="modal fade">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
                           <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
-                          <h4 class="modal-title"><span class="badge badge_delete">delete  </span>&nbsp;&nbsp;<span class="parent">/facts</span>/{factsId}</h4>
+                          <h4 class="modal-title"><span class="badge badge_get">get  </span>&nbsp;&nbsp;<span class="parent">/facts</span>/counter</h4>
                         </div>
                         <div class="modal-body">
                           <!-- Nav tabs-->
                           <ul class="nav nav-tabs">
-                            <li class="active"><a href="#facts_factsId_delete_description" data-toggle="tab">Description</a></li>
-                            <li><a href="#facts_factsId_delete_request" data-toggle="tab">Request</a></li>
+                            <li class="active"><a href="#facts_counter_get_description" data-toggle="tab">Description</a></li>
+                            <li><a href="#facts_counter_get_request" data-toggle="tab">Request</a></li>
+                            <li><a href="#facts_counter_get_response" data-toggle="tab">Response</a></li>
                           </ul>
                           <!-- Tab panes-->
                           <div class="tab-content">
-                            <div id="facts_factsId_delete_description" class="tab-pane active"><span><p>Delete a fact</p>
+                            <div id="facts_counter_get_description" class="tab-pane active"><span><p>Retrieve a collection of “counter” facts</p>
 </span>
                             </div>
-                            <div id="facts_factsId_delete_request" class="tab-pane">
+                            <div id="facts_counter_get_request" class="tab-pane">
+                            </div>
+                            <div id="facts_counter_get_response" class="tab-pane">
+                              <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/200" target="_blank">200</a></h2>
+                              <h3>Body</h3>
+                              <p><strong>Type: application/json</strong></p><strong>Example:</strong>
+                              <pre>[
+  {
+    "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"factTiedToSensorDTO"</span></span>,
+    "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">167</span></span>,
+    "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"counter"</span></span>,
+    "<span class="hljs-attribute">visible</span>":<span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">sensorId</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">totNbObs</span>":<span class="hljs-value"><span class="hljs-number">6</span>
+  </span>},
+  {
+    "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"factTiedToSensorDTO"</span></span>,
+    "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">171</span></span>,
+    "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"counter"</span></span>,
+    "<span class="hljs-attribute">visible</span>":<span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">sensorId</span>":<span class="hljs-value"><span class="hljs-number">2</span></span>,
+    "<span class="hljs-attribute">totNbObs</span>":<span class="hljs-value"><span class="hljs-number">8</span>
+  </span>}
+]
+</pre>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-white">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <!-- collapsed "buttons" (on the right side)--><a data-toggle="collapse" href="#panel_facts_counter_factsId" class="block collapsed"><span id="get_facts_counter_factsId" class="badge badge_get">get  </span><span class="parent">/facts</span>/counter/{factsId}
+                        </a>
+                    </h4>
+                  </div>
+                  <div id="panel_facts_counter_factsId" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <!-- extended "buttons" (list)-->
+                      <div class="list-group"><a href="#" data-toggle="modal" data-target="#facts_counter_factsId_get" class="list-group-item"><span class="badge badge_get">get  </span><span><p>Retrieve a “counter” fact with calculated values</p>
+</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="facts_counter_factsId_get" class="modal fade">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+                          <h4 class="modal-title"><span class="badge badge_get">get  </span>&nbsp;&nbsp;<span class="parent">/facts</span>/counter/{factsId}</h4>
+                        </div>
+                        <div class="modal-body">
+                          <!-- Nav tabs-->
+                          <ul class="nav nav-tabs">
+                            <li class="active"><a href="#facts_counter_factsId_get_description" data-toggle="tab">Description</a></li>
+                            <li><a href="#facts_counter_factsId_get_request" data-toggle="tab">Request</a></li>
+                            <li><a href="#facts_counter_factsId_get_response" data-toggle="tab">Response</a></li>
+                          </ul>
+                          <!-- Tab panes-->
+                          <div class="tab-content">
+                            <div id="facts_counter_factsId_get_description" class="tab-pane active"><span><p>Retrieve a “counter” fact with calculated values</p>
+</span>
+                            </div>
+                            <div id="facts_counter_factsId_get_request" class="tab-pane">
                               <h3>URI Parameters</h3>
                               <ul>
                                 <li><strong>factsId string</strong></li>
                               </ul>
+                            </div>
+                            <div id="facts_counter_factsId_get_response" class="tab-pane">
+                              <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/200" target="_blank">200</a></h2>
+                              <h3>Body</h3>
+                              <p><strong>Type: application/json</strong></p><strong>Example:</strong>
+                              <pre>{
+  "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"factTiedToSensorDTO"</span></span>,
+  "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">167</span></span>,
+  "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"counter"</span></span>,
+  "<span class="hljs-attribute">visible</span>":<span class="hljs-value"><span class="hljs-literal">true</span></span>,
+  "<span class="hljs-attribute">sensorId</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">totNbObs</span>":<span class="hljs-value"><span class="hljs-number">6</span>
+</span>}
+</pre>
+                              <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>The fact was not found.</p>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-white">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <!-- collapsed "buttons" (on the right side)--><a data-toggle="collapse" href="#panel_facts_dailyStats" class="block collapsed"><span id="get_facts_dailyStats" class="badge badge_get">get  </span><span class="parent">/facts</span>/dailyStats
+                        </a>
+                    </h4>
+                  </div>
+                  <div id="panel_facts_dailyStats" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <!-- extended "buttons" (list)-->
+                      <div class="list-group"><a href="#" data-toggle="modal" data-target="#facts_dailyStats_get" class="list-group-item"><span class="badge badge_get">get  </span><span><p>Retrieve a collection of “dailyStats” facts</p>
+</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="facts_dailyStats_get" class="modal fade">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+                          <h4 class="modal-title"><span class="badge badge_get">get  </span>&nbsp;&nbsp;<span class="parent">/facts</span>/dailyStats</h4>
+                        </div>
+                        <div class="modal-body">
+                          <!-- Nav tabs-->
+                          <ul class="nav nav-tabs">
+                            <li class="active"><a href="#facts_dailyStats_get_description" data-toggle="tab">Description</a></li>
+                            <li><a href="#facts_dailyStats_get_request" data-toggle="tab">Request</a></li>
+                            <li><a href="#facts_dailyStats_get_response" data-toggle="tab">Response</a></li>
+                          </ul>
+                          <!-- Tab panes-->
+                          <div class="tab-content">
+                            <div id="facts_dailyStats_get_description" class="tab-pane active"><span><p>Retrieve a collection of “dailyStats” facts</p>
+</span>
+                            </div>
+                            <div id="facts_dailyStats_get_request" class="tab-pane">
+                            </div>
+                            <div id="facts_dailyStats_get_response" class="tab-pane">
+                              <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/200" target="_blank">200</a></h2>
+                              <h3>Body</h3>
+                              <p><strong>Type: application/json</strong></p><strong>Example:</strong>
+                              <pre>[
+  {
+    "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"factTiedToDateDTO"</span></span>,
+    "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">168</span></span>,
+    "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"dailyStats"</span></span>,
+    "<span class="hljs-attribute">visible</span>":<span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">sensorId</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">totNbObs</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">avVal</span>":<span class="hljs-value"><span class="hljs-number">36.0</span></span>,
+    "<span class="hljs-attribute">date</span>":<span class="hljs-value"><span class="hljs-string">"2015-02-10"</span></span>,
+    "<span class="hljs-attribute">maxVal</span>":<span class="hljs-value"><span class="hljs-number">69.0</span></span>,
+    "<span class="hljs-attribute">minVal</span>":<span class="hljs-value"><span class="hljs-number">3.0</span></span>,
+    "<span class="hljs-attribute">nbVal</span>":<span class="hljs-value"><span class="hljs-number">6</span></span>,
+    "<span class="hljs-attribute">sumVal</span>":<span class="hljs-value"><span class="hljs-number">216.0</span>
+  </span>},
+  {
+    "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"factTiedToDateDTO"</span></span>,
+    "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">172</span></span>,
+    "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"dailyStats"</span></span>,
+    "<span class="hljs-attribute">visible</span>":<span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">sensorId</span>":<span class="hljs-value"><span class="hljs-number">2</span></span>,
+    "<span class="hljs-attribute">totNbObs</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">avVal</span>":<span class="hljs-value"><span class="hljs-number">57.125</span></span>,
+    "<span class="hljs-attribute">date</span>":<span class="hljs-value"><span class="hljs-string">"2015-02-10"</span></span>,
+    "<span class="hljs-attribute">maxVal</span>":<span class="hljs-value"><span class="hljs-number">85.0</span></span>,
+    "<span class="hljs-attribute">minVal</span>":<span class="hljs-value"><span class="hljs-number">13.0</span></span>,
+    "<span class="hljs-attribute">nbVal</span>":<span class="hljs-value"><span class="hljs-number">8</span></span>,
+    "<span class="hljs-attribute">sumVal</span>":<span class="hljs-value"><span class="hljs-number">457.0</span>
+  </span>}
+]
+</pre>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-white">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <!-- collapsed "buttons" (on the right side)--><a data-toggle="collapse" href="#panel_facts_dailyStats_factsId" class="block collapsed"><span id="get_facts_dailyStats_factsId" class="badge badge_get">get  </span><span class="parent">/facts</span>/dailyStats/{factsId}
+                        </a>
+                    </h4>
+                  </div>
+                  <div id="panel_facts_dailyStats_factsId" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <!-- extended "buttons" (list)-->
+                      <div class="list-group"><a href="#" data-toggle="modal" data-target="#facts_dailyStats_factsId_get" class="list-group-item"><span class="badge badge_get">get  </span><span><p>Retrieve a “dailyStats” fact with calculated values</p>
+</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="facts_dailyStats_factsId_get" class="modal fade">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+                          <h4 class="modal-title"><span class="badge badge_get">get  </span>&nbsp;&nbsp;<span class="parent">/facts</span>/dailyStats/{factsId}</h4>
+                        </div>
+                        <div class="modal-body">
+                          <!-- Nav tabs-->
+                          <ul class="nav nav-tabs">
+                            <li class="active"><a href="#facts_dailyStats_factsId_get_description" data-toggle="tab">Description</a></li>
+                            <li><a href="#facts_dailyStats_factsId_get_request" data-toggle="tab">Request</a></li>
+                            <li><a href="#facts_dailyStats_factsId_get_response" data-toggle="tab">Response</a></li>
+                          </ul>
+                          <!-- Tab panes-->
+                          <div class="tab-content">
+                            <div id="facts_dailyStats_factsId_get_description" class="tab-pane active"><span><p>Retrieve a “dailyStats” fact with calculated values</p>
+</span>
+                            </div>
+                            <div id="facts_dailyStats_factsId_get_request" class="tab-pane">
+                              <h3>URI Parameters</h3>
+                              <ul>
+                                <li><strong>factsId string</strong></li>
+                              </ul>
+                            </div>
+                            <div id="facts_dailyStats_factsId_get_response" class="tab-pane">
+                              <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/200" target="_blank">200</a></h2>
+                              <h3>Body</h3>
+                              <p><strong>Type: application/json</strong></p><strong>Example:</strong>
+                              <pre>{
+  "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"factTiedToDateDTO"</span></span>,
+  "<span class="hljs-attribute">id</span>":<span class="hljs-value"><span class="hljs-number">168</span></span>,
+  "<span class="hljs-attribute">orgId</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">type</span>":<span class="hljs-value"><span class="hljs-string">"dailyStats"</span></span>,
+  "<span class="hljs-attribute">visible</span>":<span class="hljs-value"><span class="hljs-literal">true</span></span>,
+  "<span class="hljs-attribute">sensorId</span>":<span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">totNbObs</span>":<span class="hljs-value"><span class="hljs-number">0</span></span>,
+  "<span class="hljs-attribute">avVal</span>":<span class="hljs-value"><span class="hljs-number">36.0</span></span>,
+  "<span class="hljs-attribute">date</span>":<span class="hljs-value"><span class="hljs-string">"2015-02-10"</span></span>,
+  "<span class="hljs-attribute">maxVal</span>":<span class="hljs-value"><span class="hljs-number">69.0</span></span>,
+  "<span class="hljs-attribute">minVal</span>":<span class="hljs-value"><span class="hljs-number">3.0</span></span>,
+  "<span class="hljs-attribute">nbVal</span>":<span class="hljs-value"><span class="hljs-number">6</span></span>,
+  "<span class="hljs-attribute">sumVal</span>":<span class="hljs-value"><span class="hljs-number">216.0</span>
+</span>}
+</pre>
+                              <h2>HTTP status code&nbsp;<a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>The fact was not found.</p>
+
                             </div>
                           </div>
                         </div>
@@ -1314,7 +1476,7 @@ REST APIs and WEB UIs. Every user belongs to a single observation.</p>
     <div class="footer">
       <div class="container">
         <p><a href="#">AMTProject1</a>&nbsp;- AMT Project 1's API documentation</p>
-        <p>Version: 0.0.2  |  Built December 15, 2014 10:19 AM</p>
+        <p>Version: 0.0.2  |  Built January 22, 2015 6:20 AM</p>
       </div>
     </div>
     <script type="text/javascript" src="/amt-project1/js/global.js"></script>
